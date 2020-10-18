@@ -47,3 +47,7 @@ print(mycol.find_one())
 for record in mycol.find():
     print(record)
 
+print("*****************************************************************")
+
+for x in mycol.find({},{ "_id": 0, "name": 1, "address": 1 }):
+  print(x)
